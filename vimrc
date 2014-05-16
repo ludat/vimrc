@@ -58,15 +58,6 @@ set matchtime=2
 " Enable syntax highlighting
 syntax enable
 
-" colorscheme solarized
-" set background=dark
-" Set extra options when running in GUI mode
-" I allays run on GUI mode!
-" set guioptions-=T
-" set guioptions+=e
-" set t_Co=256
-" set guitablabel=%M\ %t
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -109,6 +100,6 @@ set tabstop=4
 set laststatus=2
 
 " Set buffer fun!
-set wildchar=<Tab> wildmenu wildmode=full
-set wildcharm=<C-Z>
-nnoremap <F10> :b <C-Z>
+" set wildchar=<Tab> wildmenu wildmode=full
+" set wildcharm=<C-Z>
+" nnoremap <F10> :b <C-Z>
