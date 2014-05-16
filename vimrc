@@ -1,6 +1,9 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" Set <leader> to ,
+let mapleader = ","
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
