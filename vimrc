@@ -11,7 +11,11 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Set number lines
 set number
+
+" Set my own listchars to print weird characters
+set listchars=eol:$,tab:>-,trail:-,trail:·     
 
 " Start pathogen
 execute pathogen#infect()
@@ -20,7 +24,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 
 " Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=7
+" set scrolloff=7
 
 " Turn on the WiLd menu
 set wildmenu
