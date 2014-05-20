@@ -56,6 +56,9 @@ set mouse=a
 " Show matching brackets when text indicator is over them
 set showmatch
 
+" Highlight all search results
+set hlsearch
+
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
 
@@ -110,3 +113,13 @@ set laststatus=2
 " set wildchar=<Tab> wildmenu wildmode=full
 " set wildcharm=<C-Z>
 " nnoremap <F10> :b <C-Z>
+
+" clear screen clears search highlighting.
+noremap <C-H> :set hlsearch!<CR>
+
+" Save with CTRL-S
+noremap <C-S> :w<CR>
+
+" Tabs navigation
+nmap <leader>b :bp<CR>
+nmap <leader>n :bn<CR>
