@@ -23,6 +23,11 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 
+" Some configs for ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 " set scrolloff=7
 
@@ -121,5 +126,12 @@ noremap <C-H> :set hlsearch!<CR>
 noremap <C-S> :w<CR>
 
 " Tabs navigation
-nmap <leader>b :bp<CR>
-nmap <leader>n :bn<CR>
+nmap <silent> <leader>b :bprevious<CR>
+nmap <silent> <leader>n :bnext<CR>
+map <C-S-Tab> :bprevious<CR>
+map <C-Tab> :bnext<CR>
+
+map <Up> <NOP>
+map <Down> <NOP>
+map <Right> <NOP>
+map <Left> <NOP>
