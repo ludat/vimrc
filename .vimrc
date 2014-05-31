@@ -15,7 +15,7 @@ set autoread
 set number
 
 " Set my own listchars to print weird characters
-set listchars=eol:$,tab:>-,trail:-,trail:·     
+set listchars=eol:$,tab:>-,trail:·     
 
 " Start pathogen
 execute pathogen#infect()
