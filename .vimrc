@@ -19,8 +19,40 @@ set number
 " Set my own listchars to print weird characters
 set listchars=eol:$,tab:>-,trail:·     
 
-" Start pathogen
-execute pathogen#infect()
+if has('vim_starting')
+    set nocompatible
+
+    " Required
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+" Required
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'scrooloose/syntastic'
+
+" You can specify revision/branch/tag.
+" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+call neobundle#end()
+
+" Required
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" Config vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
@@ -132,6 +164,8 @@ nmap <silent> <leader>b :bprevious<CR>
 nmap <silent> <leader>n :bnext<CR>
 map <C-S-Tab> :bprevious<CR>
 map <C-Tab> :bnext<CR>
+
+imap jk <Esc>
 
 map <Up> <NOP>
 map <Down> <NOP>
