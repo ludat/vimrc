@@ -76,9 +76,6 @@ set wildignore=*.o,*~,*.pyc
 " A buffer becomes hidden when it is abandoned
 set hidden
 
-" Ignore case when searching
-set ignorecase
-
 " When searching try to be smart about cases 
 set smartcase
 
@@ -123,8 +120,6 @@ colorscheme 256-jungle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
-set nowb
-set noswapfile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
