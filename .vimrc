@@ -15,6 +15,7 @@ set autoread
 
 " Set number lines
 set number
+set relativenumber
 
 " Set my own listchars to print weird characters
 set listchars=eol:$,tab:>-,trail:·     
@@ -41,14 +42,10 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'vim-scripts/taglist.vim'
-
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 call neobundle#end()
-
-" Required
-filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -88,8 +85,8 @@ set incsearch
 " For regular expressions turn magic on
 set magic
 
-"Turn mouse on
-set mouse=a 
+"Turn mouse on only for visual mode (a=all modes, v=visual mode, i=insert mode)
+set mouse=v
 
 " Show matching brackets when text indicator is over them
 set showmatch
