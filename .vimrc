@@ -13,6 +13,10 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Set cursor column and line
+set cursorcolumn
+set cursorline
+
 " Set number lines
 set number
 set relativenumber
@@ -86,7 +90,7 @@ set incsearch
 set magic
 
 "Turn mouse on only for visual mode (a=all modes, v=visual mode, i=insert mode)
-set mouse=v
+set mouse=a
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -110,7 +114,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Set a colorscheme
-colorscheme 256-jungle
+colorscheme Tomorrow
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -150,7 +154,7 @@ set laststatus=2
 " nnoremap <F10> :b <C-Z>
 
 " clear screen clears search highlighting.
-noremap <C-H> :set hlsearch!<CR>
+noremap <leader>h :set hlsearch!<CR>
 
 " Save with CTRL-S
 noremap <C-S> :w<CR>
@@ -162,8 +166,7 @@ map <C-S-Tab> :bprevious<CR>
 map <C-Tab> :bnext<CR>
 
 imap jk <Esc>
-
-map <Up> <NOP>
-map <Down> <NOP>
-map <Right> <NOP>
-map <Left> <NOP>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
