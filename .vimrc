@@ -114,7 +114,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Set a colorscheme
-colorscheme Tomorrow
+colorscheme 256-jungle
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
