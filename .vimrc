@@ -46,6 +46,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
