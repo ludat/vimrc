@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " }}}
 " Normal options {{{
+" Basic {{{
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -103,10 +104,11 @@ set laststatus=2
 
 " Show command
 set showcmd
-" Set buffer fun!
-" set wildchar=<Tab> wildmenu wildmode=full
-" set wildcharm=<C-Z>
-" nnoremap <F10> :b <C-Z>
+" }}}
+" folding stuff {{{
+" set foldmethod marker
+set foldmethod=marker
+" }}}
 " }}}
 " Confuration for plugins {{{
 
@@ -133,14 +135,20 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'majutsushi/tagbar'
 " Multiple cursors support (TODO no idea how to use it yet)
 NeoBundle 'terryma/vim-multiple-cursors'
-" Comment and uncomment code
+" Comment and uncomment code " gc{motion} toggle comment, gcc toggle comment for a line, gCc comment a line, <v>gc toggle comment, <v>gC comment
 NeoBundle 'tomtom/tcomment_vim'
 " Tab completition when writing
 NeoBundle 'SirVer/ultisnips'
 " Snippets for ultisnip
 NeoBundle 'honza/vim-snippets'
+" Tabularize with :Tab /{regex} or visual select and the same
+NeoBundle 'godlygeek/tabular'
+" Peer programming he he he
+" NeoBundle 'FredKSchott/CoVim'
 " Automatic completition for C, C++ and Python
 NeoBundle 'Valloric/YouCompleteMe'
+" Tpope surround plugin for improved surround tags 
+NeoBundle 'tpope/vim-surround'
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
