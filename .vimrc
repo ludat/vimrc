@@ -149,6 +149,8 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'Valloric/YouCompleteMe'
 " Tpope surround plugin for improved surround tags 
 NeoBundle 'tpope/vim-surround'
+" Better start screen
+NeoBundle 'mhinz/vim-startify'
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
