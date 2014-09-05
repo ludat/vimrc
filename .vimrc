@@ -1,4 +1,5 @@
-" Preamble {{{
+" Normal options {{{
+" Absolutely esential {{{
 filetype plugin indent on
 set nocompatible
 
@@ -10,7 +11,6 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " }}}
-" Normal options {{{
 " Basic {{{
 scriptencoding utf-8
 set encoding=utf-8
@@ -19,7 +19,7 @@ set encoding=utf-8
 set history=700
 
 " Set <leader> to ,
-let mapleader = ","
+let mapleader = "\<space>"
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -45,7 +45,7 @@ set wildignore=*.o,*~,*.pyc
 set hidden
 
 " When searching try to be smart about cases 
-set smartcase
+set ignorecase
 
 " Makes search act like search in modern browsers
 set incsearch
@@ -79,6 +79,7 @@ set ffs=unix,dos,mac
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
+set noswapfile
 
 " Use spaces instead of tabs
 set expandtab
@@ -111,7 +112,7 @@ set foldmethod=marker
 " }}}
 " }}}
 " Confuration for plugins {{{
-
+" NeoBundle stuff {{{
 " Let NeoBundle manage NeoBundle
 " Required
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -145,12 +146,14 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'godlygeek/tabular'
 " Peer programming he he he
 " NeoBundle 'FredKSchott/CoVim'
-" Automatic completition for C, C++ and Python
-NeoBundle 'Valloric/YouCompleteMe'
 " Tpope surround plugin for improved surround tags 
 NeoBundle 'tpope/vim-surround'
 " Better start screen
 NeoBundle 'mhinz/vim-startify'
+" Autocompletition for python
+NeoBundle 'davidhalter/jedi-vim'
+" Check pep8 in python files
+NeoBundle 'nvie/vim-flake8'
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -159,26 +162,33 @@ call neobundle#end()
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+" }}}
 " Config vim-airline {{{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 " }}}
-
 " Some configs for ctrlp.vim {{{
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " }}}
-
 " Make ultisnips work with YCM {{{
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
-
 " Set a colorscheme {{{
 colorscheme Monokai
+"    }}}
+" Set keybindings for jedi-vim {{{
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>v"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = "1"
 "    }}}
 " }}}
 " Mappings {{{
@@ -186,7 +196,7 @@ colorscheme Monokai
 " Set Y to como se debe
 nnoremap Y y$
 " Clear screen clears search highlighting.
-noremap <leader>h :set hlsearch!<CR>
+noremap <leader>h :let @/ = ""<CR>
 
 " Save with CTRL-S
 noremap <C-S> :w<CR>
