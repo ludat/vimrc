@@ -3,13 +3,6 @@
 filetype plugin indent on
 set nocompatible
 
-if has('vim_starting')
-    " Required
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-" Required
-call neobundle#begin(expand('~/.vim/bundle/'))
-
 " }}}
 " Basic {{{
 scriptencoding utf-8
@@ -112,56 +105,49 @@ set foldmethod=marker
 " }}}
 " }}}
 " Confuration for plugins {{{
-" NeoBundle stuff {{{
-" Let NeoBundle manage NeoBundle
-" Required
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Plug stuff {{{
+call plug#begin('~/.vim/plugged')
 
-" My Bundles here:
+" My plugs here:
 " Make the bar prettier
-NeoBundle 'bling/vim-airline'
+Plug 'bling/vim-airline'
 " Better git suport
-NeoBundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Undo and redo tree
-NeoBundle 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 " Fuzzy find for files
-NeoBundle 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " Change colorscheme faster
-NeoBundle 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 " Check if my code is syntasticly correct
-NeoBundle 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " Fast move inside vim
-NeoBundle 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 " Tags for coding (TODO no idea how to use it yet)
-NeoBundle 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 " Multiple cursors support (TODO no idea how to use it yet)
-NeoBundle 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 " Comment and uncomment code " gc{motion} toggle comment, gcc toggle comment for a line, gCc comment a line, <v>gc toggle comment, <v>gC comment
-NeoBundle 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim'
 " Tab completition when writing
-NeoBundle 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Snippets for ultisnip
-NeoBundle 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 " Tabularize with :Tab /{regex} or visual select and the same
-NeoBundle 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 " Peer programming he he he
-" NeoBundle 'FredKSchott/CoVim'
+" Plug 'FredKSchott/CoVim'
 " Tpope surround plugin for improved surround tags 
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " Better start screen
-NeoBundle 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 " Autocompletition for python
-NeoBundle 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 " Check pep8 in python files
-NeoBundle 'nvie/vim-flake8'
-" You can specify revision/branch/tag.
-" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+Plug 'nvie/vim-flake8'
 
-call neobundle#end()
+call plug#end()
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 " }}}
 " Config vim-airline {{{
 let g:airline_powerline_fonts = 1
