@@ -134,7 +134,7 @@ Plug 'SirVer/ultisnips'
 " Snippets for ultisnip
 Plug 'honza/vim-snippets'
 " Tabularize with :Tab /{regex} or visual select and the same
-Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 " Peer programming he he he
 " Plug 'FredKSchott/CoVim'
 " Tpope surround plugin for improved surround tags 
