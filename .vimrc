@@ -37,14 +37,8 @@ set wildignore=*.o,*~,*.pyc
 " A buffer becomes hidden when it is abandoned
 set hidden
 
-" When searching try to be smart about cases 
-set ignorecase
-
 " Makes search act like search in modern browsers
 set incsearch
-
-" Don't redraw while executing macros (good performance config)
-"set lazyredraw
 
 " For regular expressions turn magic on
 set magic
@@ -64,9 +58,6 @@ set matchtime=2
 " Enable syntax highlighting
 syntax on
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
@@ -84,9 +75,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
-" set tw=500
-
 " Smart way to move between windows
 " map <C-j> <C-W>j
 " map <C-k> <C-W>k
@@ -98,9 +86,19 @@ set laststatus=2
 
 " Show command
 set showcmd
+
+" Copy indent from current line when starting a new line
+set autoindent
+
+" Make backspace more useful
+set backspace=indent,eol,start
+
+" Fuck octal numbers
+set nrformats-=octal
+
 " }}}
 " folding stuff {{{
-" set foldmethod marker
+" set fold method marker
 set foldmethod=marker
 " }}}
 " }}}
