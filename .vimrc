@@ -31,6 +31,9 @@ set listchars=eol:$,tab:>-,trail:·
 " Turn on the WiLd menu
 set wildmenu
 
+" Set case-insensitive for wildmenu
+set wildignorecase
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 
@@ -156,11 +159,6 @@ let g:airline_theme='badwolf'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
-" }}}
-" Make ultisnips work with YCM {{{
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 " Set a colorscheme {{{
 colorscheme Monokai
