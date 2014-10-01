@@ -43,9 +43,6 @@ set hidden
 " Makes search act like search in modern browsers
 set incsearch
 
-" For regular expressions turn magic on
-set magic
-
 "Turn mouse on only for visual mode (a=all modes, v=visual mode, i=insert mode)
 set mouse=a
 
@@ -199,5 +196,5 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " Forgot to sudo
-cmap w!! w !sudo tee % >/dev/null
+command W w !sudo tee % >/dev/null
 " }}}
