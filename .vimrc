@@ -32,7 +32,7 @@ set listchars=eol:$,tab:>-,trail:·
 set wildmenu
 
 " Set case-insensitive for wildmenu
-set wildignorecase
+set ignorecase
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
