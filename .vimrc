@@ -172,6 +172,10 @@ let g:jedi#show_call_signatures = "1"
 " }}}
 " Mappings {{{
 
+" toggle paste with F2
+set pastetoggle=<F2>
+
+
 " Set Y to como se debe
 nnoremap Y y$
 " Clear screen clears search highlighting.
