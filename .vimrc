@@ -201,4 +201,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " Forgot to sudo
 command W w !sudo tee % >/dev/null
+
+" Magic of the autocmd{{{
+" Set fold method to indent if filetype is python
+autocmd filetype python set foldmethod=indent
+" }}}
 " }}}
