@@ -134,15 +134,15 @@ Plug 'honza/vim-snippets'
 " Tabularize with :Tab /{regex} or visual select and the same
 Plug 'junegunn/vim-easy-align'
 " Peer programming he he he
-" Plug 'FredKSchott/CoVim'
+"Plug 'FredKSchott/CoVim'
 " Tpope surround plugin for improved surround tags 
 Plug 'tpope/vim-surround'
 " Better start screen
 Plug 'mhinz/vim-startify'
 " Autocompletition for python
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
-Plug 'nvie/vim-flake8'
+Plug 'nvie/vim-flake8', { 'for': 'python' }
 
 call plug#end()
 
