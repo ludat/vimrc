@@ -122,8 +122,8 @@ Plug 'scrooloose/syntastic'
 " Fast move inside vim
 Plug 'Lokaltog/vim-easymotion'
 " Tags for coding (TODO no idea how to use it yet)
-Plug 'majutsushi/tagbar'
-" Multiple cursors support (TODO no idea how to use it yet)
+Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' }
+" Multiple cursors support
 Plug 'terryma/vim-multiple-cursors'
 " Comment and uncomment code " gc{motion} toggle comment, gcc toggle comment for a line, gCc comment a line, <v>gc toggle comment, <v>gC comment
 Plug 'tomtom/tcomment_vim'
