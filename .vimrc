@@ -6,95 +6,46 @@ set nocompatible
 " }}}
 " Basic {{{
 scriptencoding utf-8
+syntax on
 set encoding=utf-8
-
-" Sets how many lines of history VIM has to remember
 set history=700
-
-" Set <leader> to ,
-let mapleader = "\<space>"
-
-" Set to auto read when a file is changed from the outside
 set autoread
-
-" Set cursor column and line
-set cursorcolumn
 set cursorline
-
-" Set number lines
+set visualbell
 set number
 set relativenumber
+set listchars=eol:$,tab:>-,trail:·
+set ignorecase
+set hidden
+set incsearch
+set mouse=a
+set showmatch
+set hlsearch
+set matchtime=2
+set ffs=unix,dos,mac
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set laststatus=2
+set showcmd
+set autoindent
+set backspace=indent,eol,start
+set nrformats-=octal
+set dictionary=/usr/share/dict/words
 
-" Set my own listchars to print weird characters
-set listchars=eol:$,tab:>-,trail:·     
-
+" }}}
+" WiLd menu stuff {{{
+"
 " Turn on the WiLd menu
 set wildmenu
 
-" Set case-insensitive for wildmenu
-set ignorecase
-
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-
-" A buffer becomes hidden when it is abandoned
-set hidden
-
-" Makes search act like search in modern browsers
-set incsearch
-
-"Turn mouse on only for visual mode (a=all modes, v=visual mode, i=insert mode)
-set mouse=a
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" Highlight all search results
-set hlsearch
-
-" How many tenths of a second to blink when matching brackets
-set matchtime=2
-
-" Enable syntax highlighting
-syntax on
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set noswapfile
-
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
-" Smart way to move between windows
-" map <C-j> <C-W>j
-" map <C-k> <C-W>k
-" map <C-h> <C-W>h
-" map <C-l> <C-W>l
-
-" Set the status bar to be seen
-set laststatus=2
-
-" Show command
-set showcmd
-
-" Copy indent from current line when starting a new line
-set autoindent
-
-" Make backspace more useful
-set backspace=indent,eol,start
-
-" Fuck octal numbers
-set nrformats-=octal
+set wildignore+=.hg,.git,.svn " Version Control
+set wildignore+=*.aux,*.out,*.toc " LaTeX intermedite files
+set wildignore+=*~ " Bakcup files and stuff
+set wildignore+=*.o " Compiled files
+set wildignore+=__pycache__,*.pyc " Python compiled files
 
 " }}}
 " folding stuff {{{
@@ -115,8 +66,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
 " Fuzzy find for files
 Plug 'kien/ctrlp.vim'
-" Change colorscheme faster
-Plug 'flazz/vim-colorschemes'
 " Check if my code is syntasticly correct
 Plug 'scrooloose/syntastic'
 " Fast move inside vim
@@ -125,7 +74,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' }
 " Multiple cursors support
 Plug 'terryma/vim-multiple-cursors'
-" Comment and uncomment code " gc{motion} toggle comment, gcc toggle comment for a line, gCc comment a line, <v>gc toggle comment, <v>gC comment
+" Comment and uncomment code
 Plug 'tomtom/tcomment_vim'
 " Tab completition when writing
 Plug 'SirVer/ultisnips'
@@ -143,22 +92,31 @@ Plug 'mhinz/vim-startify'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
 Plug 'nvie/vim-flake8', { 'for': 'python' }
+" Colorscheme
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
 " }}}
-" Config vim-airline {{{
+" vim-easy-align {{{
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+" }}}
+" vim-airline {{{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 " }}}
-" Some configs for ctrlp.vim {{{
+" ctrlp.vim {{{
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " }}}
-" Set a colorscheme {{{
-colorscheme Monokai
+" colorscheme {{{
+colorscheme badwolf
 "    }}}
 " Set keybindings for jedi-vim {{{
 let g:jedi#goto_assignments_command = "<leader>g"
@@ -172,12 +130,24 @@ let g:jedi#show_call_signatures = "1"
 " }}}
 " Mappings {{{
 
+let mapleader = "\<space>"
+
 " toggle paste with F2
 set pastetoggle=<F2>
 
+" Smart way to move between windows
+" map <C-j> <C-W>j
+" map <C-k> <C-W>k
+" map <C-h> <C-W>h
+" map <C-l> <C-W>l
 
 " Set Y to como se debe
+nnoremap H ^
+nnoremap L $
 nnoremap Y y$
+nnoremap K <nop>
+nnoremap S i<CR><esc>k:s/ *$//
+
 " Clear screen clears search highlighting.
 noremap <leader>h :let @/ = ""<CR>
 
@@ -187,8 +157,9 @@ noremap <C-S> :w<CR>
 " Tabs navigation
 nmap <silent> <leader>b :bprevious<CR>
 nmap <silent> <leader>n :bnext<CR>
-map <C-S-Tab> :bprevious<CR>
-map <C-Tab> :bnext<CR>
+
+" Folding focus
+nnoremap <leader>z zMzvzz
 
 " Replace Esc for jk
 imap jk <Esc>
