@@ -15,6 +15,7 @@ set visualbell
 set number
 set relativenumber
 set listchars=eol:$,tab:>-,trail:·
+set list
 set ignorecase
 set hidden
 set incsearch
@@ -92,6 +93,8 @@ Plug 'mhinz/vim-startify'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
 Plug 'nvie/vim-flake8', { 'for': 'python' }
+" Open the stupid competition menu automatically
+Plug 'vim-scripts/AutoComplPop'
 " Colorscheme
 Plug 'flazz/vim-colorschemes'
 
@@ -176,7 +179,6 @@ command W w !sudo tee % >/dev/null
 " Magic of the autocmd{{{
 " Set fold method to indent if filetype is python
 autocmd filetype python set foldmethod=indent
-autocmd filetype python set list
 autocmd filetype python set colorcolumn=80
 " }}}
 " }}}
