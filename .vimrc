@@ -83,8 +83,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " Tabularize with :Tab /{regex} or visual select and the same
 Plug 'junegunn/vim-easy-align'
-" Peer programming he he he
-"Plug 'FredKSchott/CoVim'
 " Tpope surround plugin for improved surround tags 
 Plug 'tpope/vim-surround'
 " Better start screen
@@ -97,6 +95,10 @@ Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'vim-scripts/AutoComplPop'
 " Colorscheme
 Plug 'flazz/vim-colorschemes'
+" Better bookmarks
+Plug 'MattesGroeger/vim-bookmarks'
+" Peer programming he he he
+"Plug 'FredKSchott/CoVim'
 
 call plug#end()
 
@@ -130,6 +132,21 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "1"
 "    }}}
+" vim-bookmarks {{{
+let g:bookmark_sign = '⚑'
+let g:bookmark_annotation_sign = '#'
+let g:bookmark_save_per_working_dir = 0
+let g:bookmark_auto_save = 1
+let g:bookmark_auto_save_file = $HOME .'/.vim-bookmarks'
+let g:bookmark_auto_close = 0
+let g:bookmark_highlight_lines = 0
+let g:bookmark_show_warning = 1
+let g:bookmark_center = 1
+" highlight BookmarkSign ctermbg=255 ctermfg=255
+" highlight BookmarkAnnotationSign ctermbg=255 ctermfg=255
+" highlight BookmarkLine ctermbg=255 ctermfg=255
+" highlight BookmarkAnnotationLine ctermbg=255 ctermfg=255
+" }}}
 " }}}
 " Mappings {{{
 
