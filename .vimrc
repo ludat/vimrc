@@ -274,4 +274,7 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 autocmd filetype python set foldmethod=indent
 autocmd filetype python set colorcolumn=80
 " }}}
+" gitcommit {{{
+autocmd filetype gitcommit set nofoldenable
+" }}}
 " }}}
