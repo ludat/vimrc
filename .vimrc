@@ -188,7 +188,69 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " Forgot to sudo
 command W w !sudo tee % >/dev/null
+" Highlight Word {{{
+"
+" This mini-plugin provides a few mappings for highlighting words temporarily.
+"
+" Sometimes you're looking at a hairy piece of code and would like a certain
+" word or two to stand out temporarily.  You can search for it, but that only
+" gives you one color of highlighting.  Now you can use <leader>N where N is
+" a number from 1-6 to highlight the current word in a specific color.
 
+function! HiInterestingWord(n) " {{{
+    " Save our location.
+    normal! mz
+
+    " Yank the current word into the z register.
+    normal! "zyiw
+
+    " Calculate an arbitrary match ID.  Hopefully nothing else is using it.
+    let mid = 86750 + a:n
+
+    " Clear existing matches, but don't worry if they don't exist.
+    silent! call matchdelete(mid)
+
+    " Construct a literal pattern that has to match at boundaries.
+    let pat = '\V\<' . escape(@z, '\') . '\>'
+
+    " Actually match the words.
+    call matchadd("InterestingWord" . a:n, pat, 1, mid)
+
+    " Move back to our original location.
+    normal! `z
+endfunction " }}}
+" Mappings {{{
+
+nnoremap <silent> <leader>h1 :call HiInterestingWord(1)<CR>
+nnoremap <silent> <leader>h2 :call HiInterestingWord(2)<CR>
+nnoremap <silent> <leader>h3 :call HiInterestingWord(3)<CR>
+nnoremap <silent> <leader>h4 :call HiInterestingWord(4)<CR>
+nnoremap <silent> <leader>h5 :call HiInterestingWord(5)<CR>
+nnoremap <silent> <leader>h6 :call HiInterestingWord(6)<CR>
+
+nnoremap <silent> <leader>hc1 :call matchdelete(86751)<CR>
+nnoremap <silent> <leader>hc2 :call matchdelete(86752)<CR>
+nnoremap <silent> <leader>hc3 :call matchdelete(86753)<CR>
+nnoremap <silent> <leader>hc4 :call matchdelete(86754)<CR>
+nnoremap <silent> <leader>hc5 :call matchdelete(86755)<CR>
+nnoremap <silent> <leader>hc6 :call matchdelete(86756)<CR>
+
+nnoremap <silent> <leader>hcc :call clearmatches()<CR>
+
+" Clear screen clears search highlighting.
+noremap <leader>hc :let @/ = ""<CR>
+" }}}
+" Default Highlights {{{
+
+hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
+hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
+hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
+hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
+hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
+hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
+
+" }}}
+" }}}
 " }}}
 " Filetype-specific {{{
 " Python {{{
