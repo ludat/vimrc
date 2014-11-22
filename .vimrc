@@ -188,6 +188,22 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " Forgot to sudo
 command W w !sudo tee % >/dev/null
+
+" Move blocks of text around {{{
+nnoremap <C-j> :m+<CR>==
+nnoremap <C-k> :m-2<CR>==
+nnoremap <C-h> <<
+nnoremap <C-l> >>
+inoremap <C-j> <Esc>:m+<CR>==gi
+inoremap <C-k> <Esc>:m-2<CR>==gi
+inoremap <C-h> <Esc><<`]a
+inoremap <C-l> <Esc>>>`]a
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
+vnoremap <C-h> <gv
+vnoremap <C-l> >gv
+" }}}
+
 " Highlight Word {{{
 "
 " This mini-plugin provides a few mappings for highlighting words temporarily.
