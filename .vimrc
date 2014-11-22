@@ -14,7 +14,9 @@ set cursorline
 set visualbell
 set number
 set relativenumber
-set listchars=eol:$,tab:>-,trail:·
+set listchars=eol:$,tab:>-,trail:·,extends:❯,precedes:❮
+set fillchars=diff:⣿,vert:│
+set lazyredraw
 set list
 set ignorecase
 set hidden
@@ -123,7 +125,7 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " colorscheme {{{
 colorscheme badwolf
 "    }}}
-" Set keybindings for jedi-vim {{{
+" jedi-vim {{{
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
@@ -152,6 +154,9 @@ let g:bookmark_center = 1
 
 let mapleader = "\<space>"
 
+" Replace Esc for jk
+imap jk <Esc>
+
 " toggle paste with F2
 set pastetoggle=<F2>
 
@@ -166,13 +171,7 @@ nnoremap H ^
 nnoremap L $
 nnoremap Y y$
 nnoremap K <nop>
-nnoremap S i<CR><esc>k:s/ *$//
-
-" Clear screen clears search highlighting.
-noremap <leader>h :let @/ = ""<CR>
-
-" Save with CTRL-S
-noremap <C-S> :w<CR>
+nnoremap <silent> S i<CR><esc>k:s/ \+$//<CR>$
 
 " Tabs navigation
 nmap <silent> <leader>b :bprevious<CR>
@@ -180,9 +179,6 @@ nmap <silent> <leader>n :bnext<CR>
 
 " Folding focus
 nnoremap <leader>z zMzvzz
-
-" Replace Esc for jk
-imap jk <Esc>
 
 " Train myself
 nnoremap <Left> :echoe "Use h"<CR>
@@ -193,7 +189,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Forgot to sudo
 command W w !sudo tee % >/dev/null
 
-" Magic of the autocmd{{{
+" }}}
+" Filetype-specific {{{
+" Python {{{
 " Set fold method to indent if filetype is python
 autocmd filetype python set foldmethod=indent
 autocmd filetype python set colorcolumn=80
