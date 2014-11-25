@@ -34,6 +34,7 @@ set laststatus=2
 set showcmd
 set autoindent
 set backspace=indent,eol,start
+set virtualedit=block
 set nrformats-=octal
 set dictionary=/usr/share/dict/words
 
@@ -65,6 +66,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 " Better git suport
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Undo and redo tree
 Plug 'sjl/gundo.vim'
 " Fuzzy find for files
