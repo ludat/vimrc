@@ -101,6 +101,8 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'flazz/vim-colorschemes'
 " Better bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
+" Show indentation better
+Plug 'nathanaelkane/vim-indent-guides'
 " Peer programming he he he
 "Plug 'FredKSchott/CoVim'
 
@@ -150,6 +152,12 @@ let g:bookmark_center = 1
 " highlight BookmarkAnnotationSign ctermbg=255 ctermfg=255
 " highlight BookmarkLine ctermbg=255 ctermfg=255
 " highlight BookmarkAnnotationLine ctermbg=255 ctermfg=255
+" }}}
+" vim-indent-guides {{{
+let g:indent_guides_auto_colors = 0
+
+hi IndentGuidesOdd  ctermbg=234
+hi IndentGuidesEven ctermbg=236
 " }}}
 " }}}
 " Mappings {{{
