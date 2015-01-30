@@ -95,16 +95,16 @@ Plug 'mhinz/vim-startify'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
 Plug 'nvie/vim-flake8', { 'for': 'python' }
-" Open the stupid competition menu automatically
-Plug 'vim-scripts/AutoComplPop'
+" " Open the stupid competition menu automatically
+" Plug 'vim-scripts/AutoComplPop'
 " Colorscheme
 Plug 'flazz/vim-colorschemes'
 " Better bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
-" Show indentation better
-Plug 'nathanaelkane/vim-indent-guides'
+" " Show indentation better
+" Plug 'nathanaelkane/vim-indent-guides'
 " Peer programming he he he
-"Plug 'FredKSchott/CoVim'
+" Plug 'FredKSchott/CoVim'
 
 call plug#end()
 
