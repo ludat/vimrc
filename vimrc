@@ -95,6 +95,8 @@ Plug 'mhinz/vim-startify'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
 Plug 'nvie/vim-flake8', { 'for': 'python' }
+" Add latex support
+Plug 'lervag/vim-latex', { 'for': 'tex' }
 " " Open the stupid competition menu automatically
 " Plug 'vim-scripts/AutoComplPop'
 " Colorscheme
