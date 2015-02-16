@@ -103,6 +103,8 @@ Plug 'lervag/vim-latex', { 'for': 'tex' }
 Plug 'flazz/vim-colorschemes'
 " Better bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
+" Yet Another complete
+Plug 'Shougo/neocomplete.vim'
 " " Show indentation better
 " Plug 'nathanaelkane/vim-indent-guides'
 " Peer programming he he he
