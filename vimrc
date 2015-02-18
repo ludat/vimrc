@@ -105,9 +105,11 @@ Plug 'flazz/vim-colorschemes'
 Plug 'MattesGroeger/vim-bookmarks'
 " Yet Another complete
 Plug 'Shougo/neocomplete.vim'
+" My own fucking wiki
+Plug 'vimwiki/vimwiki'
 " " Show indentation better
 " Plug 'nathanaelkane/vim-indent-guides'
-" Peer programming he he he
+" " Peer programming he he he
 " Plug 'FredKSchott/CoVim'
 
 call plug#end()
