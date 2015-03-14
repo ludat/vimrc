@@ -96,17 +96,13 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 " Check pep8 in python files
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 " Add latex support
-Plug 'lervag/vim-latex', { 'for': 'tex' }
+Plug 'lervag/vimtex', { 'for': 'tex' }
 " " Open the stupid competition menu automatically
 " Plug 'vim-scripts/AutoComplPop'
 " Colorscheme
 Plug 'flazz/vim-colorschemes'
 " Better bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
-" Yet Another complete
-Plug 'Shougo/neocomplete.vim'
-" My own fucking wiki
-Plug 'vimwiki/vimwiki'
 " " Show indentation better
 " Plug 'nathanaelkane/vim-indent-guides'
 " " Peer programming he he he
