@@ -70,13 +70,11 @@ Plug 'kien/ctrlp.vim' " Fuzzy find for files
 Plug 'scrooloose/syntastic' " Syntax checker
 Plug 'Lokaltog/vim-easymotion' " Fast move inside vim
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' } " Tags for coding
-" Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
 Plug 'tomtom/tcomment_vim' " Comment and uncomment code
 Plug 'SirVer/ultisnips' " Tab completition when writing
 Plug 'honza/vim-snippets' " Snippets for ultisnip
 Plug 'junegunn/vim-easy-align' " Tabularize with :Tab /{regex} or visual select and the same
 Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags 
-Plug 'mhinz/vim-startify' " Better start screen
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
 Plug 'nvie/vim-flake8', { 'for': 'python' } " Check pep8 in python files
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
@@ -84,6 +82,7 @@ Plug 'flazz/vim-colorschemes' " Colorscheme
 Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
 Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
+" Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
 
 call plug#end()
 
