@@ -71,6 +71,7 @@ Plug 'scrooloose/syntastic' " Syntax checker
 Plug 'Lokaltog/vim-easymotion' " Fast move inside vim
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' } " Tags for coding
 Plug 'tomtom/tcomment_vim' " Comment and uncomment code
+Plug 'Shougo/neocomplete.vim' " Completition everywhere
 Plug 'SirVer/ultisnips' " Tab completition when writing
 Plug 'honza/vim-snippets' " Snippets for ultisnip
 Plug 'junegunn/vim-easy-align' " Tabularize with :Tab /{regex} or visual select and the same
@@ -86,6 +87,9 @@ Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 
 call plug#end()
 
+" }}}
+" neocomplete {{{
+let g:neocomplete#enable_at_startup = 1
 " }}}
 " vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
