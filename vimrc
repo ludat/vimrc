@@ -62,51 +62,28 @@ set foldmethod=marker
 call plug#begin('~/.vim/plugged')
 
 " My plugs here:
-" Make the bar prettier
-Plug 'bling/vim-airline'
-" Better git suport
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-" Undo and redo tree
-Plug 'sjl/gundo.vim'
-" Fuzzy find for files
-Plug 'kien/ctrlp.vim'
-" Check if my code is syntasticly correct
-Plug 'scrooloose/syntastic'
-" Fast move inside vim
-Plug 'Lokaltog/vim-easymotion'
-" Tags for coding (TODO no idea how to use it yet)
-Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' }
-" Multiple cursors support
-Plug 'terryma/vim-multiple-cursors'
-" Comment and uncomment code
-Plug 'tomtom/tcomment_vim'
-" Tab completition when writing
-Plug 'SirVer/ultisnips'
-" Snippets for ultisnip
-Plug 'honza/vim-snippets'
-" Tabularize with :Tab /{regex} or visual select and the same
-Plug 'junegunn/vim-easy-align'
-" Tpope surround plugin for improved surround tags 
-Plug 'tpope/vim-surround'
-" Better start screen
-Plug 'mhinz/vim-startify'
-" Autocompletition for python
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-" Check pep8 in python files
-Plug 'nvie/vim-flake8', { 'for': 'python' }
-" Add latex support
-Plug 'lervag/vimtex', { 'for': 'tex' }
-" " Open the stupid competition menu automatically
-" Plug 'vim-scripts/AutoComplPop'
-" Colorscheme
-Plug 'flazz/vim-colorschemes'
-" Better bookmarks
-Plug 'MattesGroeger/vim-bookmarks'
-" " Show indentation better
-" Plug 'nathanaelkane/vim-indent-guides'
-" " Peer programming he he he
-" Plug 'FredKSchott/CoVim'
+Plug 'bling/vim-airline' " Make the bar prettier
+Plug 'tpope/vim-fugitive' " Add awesome support for git
+Plug 'airblade/vim-gitgutter' " Show deleted/added/modified tags for vim
+Plug 'sjl/gundo.vim' " Undo and redo tree
+Plug 'kien/ctrlp.vim' " Fuzzy find for files
+Plug 'scrooloose/syntastic' " Syntax checker
+Plug 'Lokaltog/vim-easymotion' " Fast move inside vim
+Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' } " Tags for coding
+" Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
+Plug 'tomtom/tcomment_vim' " Comment and uncomment code
+Plug 'SirVer/ultisnips' " Tab completition when writing
+Plug 'honza/vim-snippets' " Snippets for ultisnip
+Plug 'junegunn/vim-easy-align' " Tabularize with :Tab /{regex} or visual select and the same
+Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags 
+Plug 'mhinz/vim-startify' " Better start screen
+Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
+Plug 'nvie/vim-flake8', { 'for': 'python' } " Check pep8 in python files
+Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
+Plug 'flazz/vim-colorschemes' " Colorscheme
+Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
+Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
+" Plug 'FredKSchott/CoVim' " Peer programming he he he
 
 call plug#end()
 
