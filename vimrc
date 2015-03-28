@@ -136,10 +136,12 @@ let g:bookmark_center = 1
 " highlight BookmarkAnnotationLine ctermbg=255 ctermfg=255
 " }}}
 " vim-indent-guides {{{
-let g:indent_guides_auto_colors = 0
-
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=236
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 0
+let g:indent_guides_guide_size = 1
 " }}}
 " }}}
 " Mappings {{{
