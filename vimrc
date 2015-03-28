@@ -88,6 +88,11 @@ Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 call plug#end()
 
 " }}}
+" ultisnips {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" }}}
 " neocomplete {{{
 let g:neocomplete#enable_at_startup = 1
 " }}}
