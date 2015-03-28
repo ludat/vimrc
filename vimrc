@@ -192,6 +192,7 @@ inoremap <C-j> <Esc>:m+<CR>==gi
 inoremap <C-k> <Esc>:m-2<CR>==gi
 inoremap <C-h> <Esc><<`]a
 inoremap <C-l> <Esc>>>`]a
+" TODO make this better
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
 vnoremap <C-h> <gv
