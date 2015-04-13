@@ -77,7 +77,6 @@ Plug 'honza/vim-snippets' " Snippets for ultisnip
 Plug 'junegunn/vim-easy-align' " Tabularize with :Tab /{regex} or visual select and the same
 Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
-Plug 'nvie/vim-flake8', { 'for': 'python' } " Check pep8 in python files
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
 Plug 'flazz/vim-colorschemes' " Colorscheme
 Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
@@ -89,6 +88,9 @@ Plug 'vim-scripts/listmaps.vim' " List maps
 
 call plug#end()
 
+" }}}
+" syntastic {{{
+let g:syntastic_quiet_messages = { "type": "style" }
 " }}}
 " ultisnips {{{
 let g:UltiSnipsExpandTrigger="<tab>"
