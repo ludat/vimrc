@@ -75,7 +75,7 @@ Plug 'Shougo/neocomplete.vim' " Completition everywhere
 Plug 'SirVer/ultisnips' " Tab completition when writing
 Plug 'honza/vim-snippets' " Snippets for ultisnip
 Plug 'junegunn/vim-easy-align' " Tabularize with :Tab /{regex} or visual select and the same
-Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags 
+Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
 Plug 'nvie/vim-flake8', { 'for': 'python' } " Check pep8 in python files
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
