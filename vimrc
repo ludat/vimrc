@@ -278,6 +278,6 @@ autocmd filetype python setlocal foldmethod=indent
 autocmd filetype python setlocal colorcolumn=80
 " }}}
 " gitcommit {{{
-autocmd filetype gitcommit set nofoldenable
+autocmd filetype gitcommit setlocal nofoldenable
 " }}}
 " }}}
