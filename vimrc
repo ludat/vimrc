@@ -83,6 +83,7 @@ Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
 Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 Plug 'vim-scripts/django.vim'
 Plug 'vim-scripts/listmaps.vim' " List maps
+Plug 'tpope/vim-repeat' " Improve the . repeat command
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
 " Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
 
