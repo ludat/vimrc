@@ -177,8 +177,9 @@ nnoremap K <nop>
 nnoremap <silent> S i<CR><esc>k:s/ \+$//<CR>$
 
 " Tabs navigation
-nmap <silent> <leader>b :bprevious<CR>
-nmap <silent> <leader>n :bnext<CR>
+nmap <leader>b :bprevious<CR>
+nmap <leader>n :bnext<CR>
+nmap <leader>d :bdelete<CR>
 
 " Folding focus
 nnoremap <leader>z zMzvzz
