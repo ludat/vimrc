@@ -98,9 +98,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " }}}
-" neocomplete {{{
-let g:neocomplete#enable_at_startup = 1
-" }}}
 " vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
@@ -121,17 +118,19 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " colorscheme {{{
 colorscheme badwolf
 "    }}}
+" neocomplete {{{
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:neocomplete#force_omni_input_patterns.python =
+\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+" alternative pattern: '\h\w*\|[^. \t]\.\w*'
+" }}}
 " jedi-vim {{{
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>v"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "1"
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
 "    }}}
 " vim-bookmarks {{{
 let g:bookmark_sign = '⚑'
