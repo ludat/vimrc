@@ -131,6 +131,12 @@ let g:neocomplete#force_omni_input_patterns.python =
 " jedi-vim {{{
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
+let g:jedi#goto_assignments_command = "<leader>jg"
+let g:jedi#goto_definitions_command = "<leader>jd"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>jn"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>jr"
 "    }}}
 " vim-bookmarks {{{
 let g:bookmark_sign = '⚑'
