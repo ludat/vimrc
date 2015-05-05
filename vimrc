@@ -93,7 +93,6 @@ call plug#end()
 
 " }}}
 " syntastic {{{
-let g:syntastic_quiet_messages = { "type": "style" }
 " }}}
 " ultisnips {{{
 let g:UltiSnipsExpandTrigger="<tab>"
