@@ -84,6 +84,8 @@ Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 Plug 'vim-scripts/django.vim'
 Plug 'vim-scripts/listmaps.vim' " List maps
 Plug 'tpope/vim-repeat' " Improve the . repeat command
+Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
+Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
 " Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
 
