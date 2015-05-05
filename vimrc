@@ -128,6 +128,9 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " colorscheme {{{
 colorscheme badwolf
 "    }}}
+" deoplete {{{
+let g:deoplete#enable_at_startup = 1
+" }}}
 " jedi-vim {{{
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
