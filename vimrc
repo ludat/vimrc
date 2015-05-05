@@ -280,7 +280,7 @@ autocmd filetype python setlocal foldmethod=indent
 autocmd filetype python setlocal colorcolumn=80
 " }}}
 " gitcommit {{{
-autocmd filetype gitcommit setlocal nofoldenable
+autocmd filetype gitcommit setlocal nofoldenable spell spelllang=en
 " }}}
 " vim {{{
 autocmd filetype vim setlocal foldmethod=marker
