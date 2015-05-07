@@ -86,6 +86,7 @@ Plug 'vim-scripts/listmaps.vim' " List maps
 Plug 'tpope/vim-repeat' " Improve the . repeat command
 Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
 Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
+Plug 'chase/vim-ansible-yaml' " Add syntax highlight for ansible yaml
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
 " Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
 
