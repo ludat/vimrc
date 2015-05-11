@@ -78,7 +78,6 @@ Plug 'godlygeek/tabular' " Tabularize with :Tab /{regex} or visual select and th
 Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
-Plug 'flazz/vim-colorschemes' " Colorscheme
 Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
 Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 Plug 'vim-scripts/django.vim'
@@ -89,6 +88,9 @@ Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
 Plug 'chase/vim-ansible-yaml' " Add syntax highlight for ansible yaml
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
 " Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
+" Colorschemes
+Plug 'sjl/badwolf' " badwolf
+Plug 'nanotech/jellybeans.vim' " jellybeans
 
 call plug#end()
 
@@ -117,9 +119,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " }}}
-" colorscheme {{{
-colorscheme badwolf
-"    }}}
 " neocomplete {{{
 let g:neocomplete#enable_at_startup = 1
 if !exists('g:neocomplete#force_omni_input_patterns')
@@ -164,6 +163,9 @@ let g:indent_guides_start_level = 0
 let g:indent_guides_guide_size = 1
 " }}}
 " }}}
+" colorscheme {{{
+colorscheme badwolf
+"    }}}
 " Mappings {{{
 
 let mapleader = "\<space>"
