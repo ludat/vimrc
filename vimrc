@@ -25,7 +25,7 @@ set mouse=a
 set showmatch
 set hlsearch
 set matchtime=2
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 set expandtab
 set smarttab
 set shiftwidth=4
