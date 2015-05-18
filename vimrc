@@ -79,9 +79,9 @@ Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
 Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
-Plug 'nathanaelkane/vim-indent-guides' " Show indentation better
 Plug 'vim-scripts/django.vim'
 Plug 'vim-scripts/listmaps.vim' " List maps
+Plug 'luochen1990/rainbow' " Color different paretheses
 Plug 'tpope/vim-repeat' " Improve the . repeat command
 Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
 Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
