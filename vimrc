@@ -117,7 +117,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='badwolf'
 " }}}
 " ctrlp.vim {{{
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " }}}
