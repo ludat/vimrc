@@ -291,4 +291,7 @@ autocmd filetype gitcommit setlocal nofoldenable spell spelllang=en
 " vim {{{
 autocmd filetype vim setlocal foldmethod=marker
 " }}}
+" djangohtml {{{
+autocmd filetype htmldjango setlocal noexpandtab
+" }}}
 " }}}
