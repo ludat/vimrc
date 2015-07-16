@@ -69,6 +69,7 @@ Plug 'sjl/gundo.vim' " Undo and redo tree
 Plug 'kien/ctrlp.vim' " Fuzzy find for files
 Plug 'scrooloose/syntastic' " Syntax checker
 Plug 'Lokaltog/vim-easymotion' " Fast move inside vim
+Plug 'justinmk/vim-sneak' " More magick s command
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpen' } " Tags for coding
 Plug 'tomtom/tcomment_vim' " Comment and uncomment code
 Plug 'Shougo/neocomplete.vim' " Completition everywhere
