@@ -86,6 +86,7 @@ Plug 'luochen1990/rainbow' " Color different paretheses
 Plug 'tpope/vim-repeat' " Improve the . repeat command
 Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
 Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
+Plug 'phildawes/racer', { 'for': 'rust','do': 'cargo build --release'}
 Plug 'chase/vim-ansible-yaml' " Add syntax highlight for ansible yaml
 Plug 'vim-scripts/iptables' " Add syntax highlight for iptables
 Plug 'rstacruz/sparkup' " Magic to create html
@@ -165,6 +166,10 @@ hi IndentGuidesEven ctermbg=236
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_start_level = 0
 let g:indent_guides_guide_size = 1
+" }}}
+" races {{{
+let g:racer_cmd = "/home/lucas/.vim/plugged/racer/target/release/racer"
+let $RUST_SRC_PATH="/home/lucas/.vim/plugged/racer/src/"
 " }}}
 " }}}
 " colorscheme {{{
