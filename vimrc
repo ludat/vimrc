@@ -180,8 +180,8 @@ colorscheme badwolf
 let mapleader = "\<space>"
 nnoremap <CR> :
 
-" Replace Esc for jk
-imap jk <Esc>
+" Replace Esc for fd
+imap fd <Esc>
 
 " toggle paste with F2
 set pastetoggle=<F2>
