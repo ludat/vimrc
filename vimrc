@@ -86,7 +86,7 @@ Plug 'luochen1990/rainbow' " Color different paretheses
 Plug 'tpope/vim-repeat' " Improve the . repeat command
 Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
 Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
-Plug 'phildawes/racer', { 'for': 'rust','do': 'cargo build --release'}
+" Plug 'phildawes/racer', { 'for': 'rust','do': 'cargo build --release'}
 Plug 'chase/vim-ansible-yaml' " Add syntax highlight for ansible yaml
 Plug 'vim-scripts/iptables' " Add syntax highlight for iptables
 Plug 'rstacruz/sparkup' " Magic to create html
