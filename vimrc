@@ -178,6 +178,7 @@ colorscheme badwolf
 " Mappings {{{
 
 let mapleader = "\<space>"
+nnoremap <CR> :
 
 " Replace Esc for jk
 imap jk <Esc>
