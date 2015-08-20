@@ -79,7 +79,7 @@ Plug 'godlygeek/tabular' " Tabularize with :Tab /{regex} or visual select and th
 Plug 'tpope/vim-surround' " Tpope surround plugin for improved surround tags
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Autocompletition for python
 Plug 'lervag/vimtex', { 'for': 'tex' } " Add latex support
-Plug 'MattesGroeger/vim-bookmarks' " Better bookmarks
+Plug 'kshenoy/vim-signature' " Better bookmarks
 Plug 'vim-scripts/django.vim'
 Plug 'vim-scripts/listmaps.vim' " List maps
 Plug 'luochen1990/rainbow' " Color different paretheses
