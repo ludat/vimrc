@@ -62,7 +62,8 @@ set foldmethod=marker
 call plug#begin('~/.vim/plugged')
 
 " My plugs here:
-Plug 'bling/vim-airline' " Make the bar prettier
+Plug 'vim-airline/vim-airline' " Make the bar prettier
+Plug 'vim-airline/vim-airline-themes' " Load airline themes
 Plug 'tpope/vim-fugitive' " Add awesome support for git
 Plug 'airblade/vim-gitgutter' " Show deleted/added/modified tags for vim
 Plug 'sjl/gundo.vim' " Undo and redo tree
