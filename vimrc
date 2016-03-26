@@ -67,7 +67,7 @@ Plug 'vim-airline/vim-airline-themes' " Load airline themes
 Plug 'tpope/vim-fugitive' " Add awesome support for git
 Plug 'airblade/vim-gitgutter' " Show deleted/added/modified tags for vim
 Plug 'sjl/gundo.vim' " Undo and redo tree
-Plug 'kien/ctrlp.vim' " Fuzzy find for files
+Plug 'ctrlpvim/ctrlp.vim' " Fuzzy find for files
 Plug 'scrooloose/syntastic' " Syntax checker
 Plug 'Lokaltog/vim-easymotion' " Fast move inside vim
 Plug 'justinmk/vim-sneak' " More magick s command
@@ -87,10 +87,12 @@ Plug 'luochen1990/rainbow' " Color different paretheses
 Plug 'tpope/vim-repeat' " Improve the . repeat command
 Plug 'tkztmk/vim-vala' " Add syntax highlight for vala
 Plug 'rust-lang/rust.vim' " Add syntax highlight for rust
+Plug 'lambdatoast/elm.vim' " Elm extensions
 " Plug 'phildawes/racer', { 'for': 'rust','do': 'cargo build --release'}
 Plug 'chase/vim-ansible-yaml' " Add syntax highlight for ansible yaml
 Plug 'vim-scripts/iptables' " Add syntax highlight for iptables
 Plug 'rstacruz/sparkup' " Magic to create html
+Plug 'cespare/vim-toml'
 " Plug 'Yggdroot/indentLine' " Add indent lines with special char
 " Plug 'FredKSchott/CoVim' " Peer programming he he he
 " Plug 'terryma/vim-multiple-cursors' " Multiple cursors support
